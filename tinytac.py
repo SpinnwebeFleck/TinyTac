@@ -104,7 +104,6 @@ def computerSpieler(brett, spieler):
     bewegenen = [(bewegen, bewegenBewerten(bewegen)) for bewegen in brett.bekommenGultigBewegt()]
     random.shuffle(bewegenen)
     bewegenen.sort(key = lambda (bewegen, gewinner): gewinner)
-    print bewegenen
     brett.machenBewegen(bewegenen[-1][0], spieler)
 
 def spiel():
@@ -123,7 +122,7 @@ def spiel():
 
     b.ausgang()
     if b.gewinner():
-        print 'Computer Spieler gewinnt!' % b.gewinner()
+        print 'Computer Spieler gewinnt!'
     else:
         print 'Das Spiel endet.'
 
